@@ -4,6 +4,8 @@ import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
+import java.awt.*;
+
 @ConfigGroup("stealingartefacts")
 public interface StealingArtefactsConfig extends Config {
 
@@ -17,5 +19,12 @@ public interface StealingArtefactsConfig extends Config {
     {
         return false;
     }
+    @ConfigItem(
+            position = 2,
+            keyName = "highlightTargetsColor",
+            name = "Highlight Targets Color",
+            description = "Changes the color of the highlighted targets"
+    )
+    default Color highlightTargetsColor() {return Color.red;}
 }
 
